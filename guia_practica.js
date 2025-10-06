@@ -1,6 +1,5 @@
-/*Yker Mendoza*/
+/*Yker Mnedoza*/
 
-// Bloque 1: Ejercicios con Cadenas
 function contarCaracteres() {
   let palabra = prompt("Ingresa una palabra:");
   console.log("La palabra tiene " + palabra.length + " letras.");
@@ -108,7 +107,23 @@ function dividirOracion() {
   console.log(palabra);
 }
 
-// Bloque 2: Ejercicios con Arreglos
+function contarPalabras() {
+  let texto = prompt("Ingresa una oración:");
+  let contador = 1;
+  for (let i = 0; i < texto.length; i++) {
+    if (texto[i] == " ") {
+      contador++;
+    }
+  }
+  console.log("Número de palabras: " + contador);
+}
+
+function textoMayusculasMinusculas() {
+  let texto = prompt("Ingresa un texto:");
+  console.log("Mayúsculas: " + texto.toUpperCase());
+  console.log("Minúsculas: " + texto.toLowerCase());
+}
+
 function divisoresDeArreglo() {
   let numeros = [6, 10];
   for (let i = 0; i < numeros.length; i++) {
@@ -229,16 +244,4 @@ function eliminarDuplicados() {
   console.log("Sin duplicados: " + sinDuplicados.join(", "));
 }
 
-function ordenarArreglo() {
-  let numeros = [5, 3, 1, 4, 2];
-  for (let i = 0; i < numeros.length - 1; i++) {
-    for (let j = i + 1; j < numeros.length; j++) {
-      if (numeros[i] > numeros[j]) {
-        let temp = numeros[i];
-        numeros[i] = numeros[j];
-        numeros[j] = temp;
-      }
-    }
-  }
-  console.log("Arreglo ordenado: " + numeros.join(", "));
-}
+function ordenarArreglo
