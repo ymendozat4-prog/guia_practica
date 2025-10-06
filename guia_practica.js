@@ -52,8 +52,8 @@ function iniciales() {
 
 function reemplazoCaracter() {
   let texto = prompt("Ingrese un texto:");
-  let letra = prompt("Ingrese la letra que sea cambiar:");
-  let nueva = prompt("Ingrese que letra desea poner:");
+  let letra = prompt("Ingrese la letra que desea cambiar:");
+  let nueva = prompt("Ingrese la letra nueva:");
   let nuevoTexto = "";
   for (let i = 0; i < texto.length; i++) {
     nuevoTexto += texto[i] == letra ? nueva : texto[i];
