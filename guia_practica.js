@@ -244,4 +244,32 @@ function eliminarDuplicados() {
   console.log("Sin duplicados: " + sinDuplicados.join(", "));
 }
 
-function ordenarArreglo
+function ordenarArreglo() {
+  let numeros = [5, 3, 1, 4, 2];
+  for (let i = 0; i < numeros.length - 1; i++) {
+    for (let j = i + 1; j < numeros.length; j++) {
+      if (numeros[i] > numeros[j]) {
+        let temp = numeros[i];
+        numeros[i] = numeros[j];
+        numeros[j] = temp;
+      }
+    }
+  }
+  console.log("Arreglo ordenado: " + numeros.join(", "));
+}
+
+function frecuenciaElementos() {
+  let numeros = [1, 2, 2, 3, 3, 3, 4];
+  let frecuencias = {};
+  for (let i = 0; i < numeros.length; i++) {
+    let num = numeros[i];
+    if (frecuencias[num]) {
+      frecuencias[num]++;
+    } else {
+      frecuencias[num] = 1;
+    }
+  }
+  for (let clave in frecuencias) {
+    console.log("El número " + clave + " aparece " + frecuencias[clave] + " veces.");
+  }
+}
